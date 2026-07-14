@@ -10,16 +10,11 @@ class CardHand:
         }
 
     def add_card(self, r, s):
-        """Add a new card with rank r and suit s."""
         card = (r, s)
         self.cards.append(card)
         self.suits[s].append(card)
 
     def play(self, s):
-        """
-        Remove and return a card of suit s.
-        If no such card exists, remove and return any card.
-        """
         if self.suits[s]:
             card = self.suits[s].pop(0)
             self.cards.remove(card)
@@ -33,15 +28,10 @@ class CardHand:
         return None
 
     def __iter__(self):
-        """Iterate through all cards in the hand."""
         return iter(self.cards)
 
     def all_of_suit(self, s):
-        """Iterate through all cards of a given suit."""
         return iter(self.suits[s])
-
-
-# ---------------- Driver Code ----------------
 
 hand = CardHand()
 
