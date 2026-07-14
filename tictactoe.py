@@ -40,15 +40,10 @@ class TicTacToe:
         if all(self.board[r][i] == p for i in range(3)):
             return True
 
-        # Check column
         if all(self.board[i][c] == p for i in range(3)):
             return True
-
-        # Check main diagonal
         if r == c and all(self.board[i][i] == p for i in range(3)):
             return True
-
-        # Check anti-diagonal
         if r + c == 2 and all(self.board[i][2 - i] == p for i in range(3)):
             return True
 
