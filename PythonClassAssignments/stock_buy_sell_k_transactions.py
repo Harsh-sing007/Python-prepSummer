@@ -15,7 +15,6 @@ class StockProfit:
                     profit += self.prices[i] - self.prices[i - 1]
             return profit
 
-        # DP Table
         dp = [[0] * n for _ in range(k + 1)]
 
         for t in range(1, k + 1):
@@ -28,12 +27,11 @@ class StockProfit:
         return dp[k][n - 1]
 
 
-# Driver Code
-if __name__ == "__main__":
+# if __name__ == "__main__":
 
-    k = int(input("Enter number of transactions (k): "))
-    prices = list(map(int, input("Enter stock prices: ").split()))
+#     k = int(input("Enter number of transactions (k): "))
+#     prices = list(map(int, input("Enter stock prices: ").split()))
 
-    obj = StockProfit(prices)
+#     obj = StockProfit(prices)
 
-    print("Maximum Profit:", obj.max_profit(k))
+#     print("Maximum Profit:", obj.max_profit(k))

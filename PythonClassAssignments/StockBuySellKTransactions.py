@@ -31,12 +31,12 @@ class StockBuySell:
         return dp[k][n - 1]
 
 
-# Driver Code
-if __name__ == "__main__":
+# # Driver Code
+# if __name__ == "__main__":
 
-    k = int(input("Enter number of transactions (k): "))
-    prices = list(map(int, input("Enter stock prices: ").split()))
+#     k = int(input("Enter number of transactions (k): "))
+#     prices = list(map(int, input("Enter stock prices: ").split()))
 
-    obj = StockBuySell(prices)
+#     obj = StockBuySell(prices)
 
-    print("Maximum Profit:", obj.max_profit(k))
+#     print("Maximum Profit:", obj.max_profit(k))
